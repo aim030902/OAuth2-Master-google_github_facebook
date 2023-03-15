@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    password: 123
+    url: jdbc:postgresql://localhost:5432/sales
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Iv1.7a923b87f98d60b4
+            clientSecret: bcf2ca5c86a728374659a821296d87844ae7f35b
+            scope:
+              - user:email
+              - read:user
+          google:
+            clientId: 110643441419-e45dc4818ck26ltl6otd1jun2t7b26ml.apps.googleusercontent.com
+            clientSecret: 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
+            scope:
+              - email
+              - profile
+          facebook:
+            clientId: 648279197013474
+            clientSecret: 391fb1b3c5edf3ffeb4937908be037a6
+            scope:
+              - email
+              - public_profile
